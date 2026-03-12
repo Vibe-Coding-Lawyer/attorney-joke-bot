@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "joke": "Why did the lawyer bring a ladder to court? Because he wanted to raise an objection.",
+    "rating": 3,
+    "commentary": "funny, but face-palm kind of funny",
+    "posted": false,
+    "date_posted": null
+  },
+  {
+    "id": 2,
+    "joke": "My friend asked what I learned in law school. I said, \"Mostly how to bill by the hour \u2014 but that lesson was free.\"",
+    "rating": 0,
+    "commentary": "swing and a miss",
+    "posted": false,
+    "date_posted": null
+  },
+  {
+    "id": 3,
+    "joke": "What's the difference between a legal brief and a pair of boxers? One covers your assets, the other covers your... well, also your assets.",
+    "rating": 3,
+    "commentary": "silly but I didn't even chuckle",
+    "posted": false,
+    "date_posted": null
+  },
+  {
+    "id": 4,
+    "joke": "I got hit with a subpoena yesterday. Man, those things really serve you right.",
+    "rating": 2,
+    "commentary": "meh",
+    "posted": false,
+    "date_posted": null
+  },
+  {
+    "id": 5,
+    "joke": "During discovery, opposing counsel asked if I had any hidden documents. I said, \"I'm an open book \u2014 just not a casebook.\"",
+    "rating": 0,
+    "commentary": "nope, didn't feel this one at all",
+    "posted": false,
+    "date_posted": null
+  },
+  {
+    "id": 6,
+    "joke": "A contract walked into a bar and the bartender said, \"Sorry, I can't serve you \u2014 too many conditions.\"",
+    "rating": 2,
+    "commentary": "a slight smile on this one",
+    "posted": false,
+    "date_posted": null
+  },
+  {
+    "id": 7,
+    "joke": "How did the paralegal fix the broken copier? With a brief recess and some pro bono toner.",
+    "rating": 0,
+    "commentary": "nope, had no reaction on this one",
+    "posted": false,
+    "date_posted": null
+  },
+  {
+    "id": 8,
+    "joke": "The jury told the judge they couldn't reach a verdict because they kept losing their conviction.",
+    "rating": 1,
+    "commentary": "face-palm reaction. so dumb!",
+    "posted": false,
+    "date_posted": null
+  },
+  {
+    "id": 9,
+    "joke": "Somebody asked if I passed the bar exam. I said, \"Yep \u2014 though I also pass the bar on Main Street every day without stopping in, which is harder.\"",
+    "rating": 2,
+    "commentary": "oof, just made me feel bad because alcoholism is real in our profession",
+    "posted": false,
+    "date_posted": null
+  },
+  {
+    "id": 10,
+    "joke": "I tried to settle my case out of court, but the parking lot was too small.",
+    "rating": 1,
+    "commentary": "to be honest, this one took me too long to get so maybe I should give myself a low rating!",
+    "posted": false,
+    "date_posted": null
+  }
+]
