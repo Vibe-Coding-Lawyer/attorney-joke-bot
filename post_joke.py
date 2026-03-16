@@ -56,13 +56,14 @@ def get_reaction(client, entry):
 
 
 def build_post(joke, rating, reaction):
+    reaction = reaction[0].upper() + reaction[1:] if reaction else reaction
     return (
-        f"I built an attorney joke bot. Here's what it served up this week.\n\n"
+        f"I built an attorney joke bot. Here's what it served up this week:\n\n"
         f"{joke}\n\n"
         f"---\n\n"
-        f"Chuckle score: {rating}/5.\n"
+        f"Chuckle score: {rating}/5\n"
         f"{reaction}\n\n"
-        f"Anyone else building weird little things for lawyers? I want to see them.\n"
+        f"Anyone else building weird little things for lawyers? Share in the comments!\n\n"
         f"#LegalTech #LawyerHumor #AttorneyLife"
     )
 
