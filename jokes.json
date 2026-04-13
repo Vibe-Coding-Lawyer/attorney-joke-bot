@@ -28,8 +28,8 @@
     "joke": "I got hit with a subpoena yesterday. Man, those things really serve you right.",
     "rating": 2,
     "commentary": "meh",
-    "posted": false,
-    "date_posted": null
+    "posted": true,
+    "date_posted": "2026-04-13"
   },
   {
     "id": 5,
