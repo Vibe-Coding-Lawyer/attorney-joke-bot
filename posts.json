@@ -6,5 +6,13 @@
     "hook_technique": "Direct accusation",
     "chuckle_score": 2,
     "post": "Most people wait for a brilliant AI idea. That's why they never build anything.\n\nI built an attorney joke bot. Here's what it served up this week:\n\n\"I got hit with a subpoena yesterday. Man, those things really serve you right.\"\n\n--\nChuckle score: 2/5. Meh.\n--\n\nA 2/5 week is still a shipped week. The bot runs, the joke lands (barely), and I learned more fixing small things than I would've reading another \"State of Legal AI\" report.\n\nIf you haven't built yet, the lesson is simple: your first project doesn't have to be useful. It has to exist.\n\nWhat's the dumbest useful thing you could automate this weekend?\n\n#LegalTech #LawyerHumor #AttorneyLife #LegalEngineering"
+  },
+  {
+    "id": 2,
+    "date": "2026-04-17",
+    "joke_id": 5,
+    "hook_technique": "Stolen thought",
+    "chuckle_score": 0,
+    "post": "I built an attorney joke bot. Here's what it served up this week:\n\nDuring discovery, opposing counsel asked if I had any hidden documents. I said, \"I'm an open book \u2014 just not a casebook.\"\n\n---\n\nChuckle score: 0/5\nNope, didn't feel this one at all\n\nAnyone else building weird little things for lawyers? Share in the comments!\n\n#LegalTech #LawyerHumor #AttorneyLife"
   }
 ]
