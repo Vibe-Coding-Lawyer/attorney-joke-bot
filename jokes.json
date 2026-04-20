@@ -44,8 +44,8 @@
     "joke": "A contract walked into a bar and the bartender said, \"Sorry, I can't serve you \u2014 too many conditions.\"",
     "rating": 2,
     "commentary": "a slight smile on this one",
-    "posted": false,
-    "date_posted": null
+    "posted": true,
+    "date_posted": "2026-04-20"
   },
   {
     "id": 7,
