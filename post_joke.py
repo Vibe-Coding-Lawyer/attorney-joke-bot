@@ -68,43 +68,96 @@ def get_next_joke(backlog):
     return None
 
 
-def generate_reaction(client, score):
+def load_state():
+    if not os.path.exists(STATE_FILE):
+        return {"last_hook_technique": ""}
+    with open(STATE_FILE, "r") as f:
+        return json.load(f)
+
+
+def save_state(state):
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f, indent=2)
+
+
+def generate_post(client, entry):
+    state = load_state()
+    last_technique = state.get("last_hook_technique", "")
+    commentary = entry.get("commentary", "")
+    if commentary:
+        commentary = commentary[0].upper() + commentary[1:]
+        if not commentary.endswith("."):
+            commentary += "."
+
+    prompt = f"""You are generating a weekly LinkedIn post for an attorney joke bot series.
+
+AUDIENCE: Lawyers curious about AI, and developers/legal tech builders. Both should finish reading thinking "I could try that."
+
+POST FORMAT — use exactly this structure, including spacing:
+
+[HOOK LINE 1]
+[HOOK LINE 2]
+
+I built an attorney joke bot. Here's what it served up this week:
+
+"{entry['joke']}"
+
+--
+Chuckle score: {entry['rating']}/5. {commentary}
+--
+
+[BODY: 2-3 short paragraphs, reader-focused]
+
+[CLOSING QUESTION]
+
+#LegalTech #LawyerHumor #AttorneyLife #LegalEngineering
+
+HOOK RULES:
+- Exactly 2 short sentences, ~55 characters each
+- Never opens with "I" or a personal achievement
+- No emojis, no hashtags
+- Creates an open loop the reader must close
+- Last technique used: "{last_technique}" — do NOT reuse it
+- Pick one of these techniques:
+  1. Contradiction — say something that sounds wrong
+  2. Specific number + unexpected context
+  3. Direct accusation — call the reader out
+  4. Stolen thought — say what the reader secretly thinks
+  5. Absurd reframe — make something mundane dramatic
+
+BODY RULES:
+- Never leads with "I built" or personal achievement framing
+- Reframe the joke and score as something the READER can learn from
+- Tone: warm, self-deprecating, technically credible
+- 2-3 short paragraphs max
+
+ATTRIBUTION:
+- The bot only generates jokes
+- The chuckle score and commentary are Veronica's — never attribute them to the bot
+
+CLOSING QUESTION:
+- One line, directed at the reader
+- Answerable by both a lawyer and a developer
+- Not rhetorical
+
+Your response must start with: TECHNIQUE: [name of technique used]
+Then a blank line, then the full post. Nothing else."""
+
     message = client.messages.create(
         model="claude-opus-4-6",
-        max_tokens=30,
-        messages=[
-            {
-                "role": "user",
-                "content": (
-                    f"The chuckle score for an attorney dad joke is {score}/5. "
-                    "Write one short deadpan reaction to this score. "
-                    "Under 6 words. Dry, self-aware, never a cliche. "
-                    "Examples: 'It's trying.' / 'Progress.' / 'We'll get there.' / 'The bot is not sorry.' "
-                    "Return only the reaction line, nothing else."
-                ),
-            }
-        ],
+        max_tokens=600,
+        messages=[{"role": "user", "content": prompt}],
     )
-    return message.content[0].text.strip()
 
+    response = message.content[0].text.strip()
+    lines = response.split("\n", 2)
+    technique = lines[0].replace("TECHNIQUE:", "").strip()
+    post = lines[2].strip() if len(lines) > 2 else response
 
-def get_reaction(client, entry):
-    if entry.get("commentary"):
-        return entry["commentary"]
-    return generate_reaction(client, entry["rating"])
+    state["last_hook_technique"] = technique
+    save_state(state)
 
-
-def build_post(joke, rating, reaction):
-    reaction = reaction[0].upper() + reaction[1:] if reaction else reaction
-    return (
-        f"I built an attorney joke bot. Here's what it served up this week:\n\n"
-        f"{joke}\n\n"
-        f"---\n\n"
-        f"Chuckle score: {rating}/5\n"
-        f"{reaction}\n\n"
-        f"Anyone else building weird little things for lawyers? Share in the comments!\n\n"
-        f"#LegalTech #LawyerHumor #AttorneyLife"
-    )
+    return post
 
 
 def get_person_id(access_token):
@@ -163,11 +216,8 @@ if __name__ == "__main__":
     print(f"Using joke #{entry['id']}: {entry['joke'][:80]}...")
     print(f"Your rating: {entry['rating']}/5")
 
-    print("Getting reaction line...")
-    reaction = get_reaction(client, entry)
-
-    post = build_post(entry["joke"], entry["rating"], reaction)
-    print(f"\nFull post:\n{post}\n")
+    print("Generating post...")
+    post = generate_post(client, entry)
 
     print("Fetching LinkedIn person ID...")
     person_id = get_person_id(access_token)
