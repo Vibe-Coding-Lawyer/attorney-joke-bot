@@ -53,7 +53,9 @@
     "rating": 0,
     "commentary": "nope, had no reaction on this one",
     "posted": false,
-    "date_posted": null
+    "date_posted": null,
+    "post_text": "You've laughed at a worse joke than this today.\nYou just won't admit it was in a contract.\n\nI built an attorney joke bot. Here's what it served up this week:\n\n\"How did the paralegal fix the broken copier? With a brief recess and some pro bono toner.\"\n\n--\nChuckle score: 0/5. Nope, had no reaction on this one.\n--\n\nA zero is actually useful data. This joke stacks three legal puns on top of each other and hopes volume equals funny. If you've ever tried prompt engineering, you recognize the pattern \u2014 the model is hedging its bets instead of committing to one strong punchline. That's a signal worth tuning on.\n\nThe trick most people miss with generative humor is constraint. When you let a model throw everything at the wall, you get \"brief recess and pro bono toner\" \u2014 two unrelated puns glued together by wishful thinking. Tightening the output format to one pun per joke is a small guardrail that changes everything. Sometimes the best prompt work is just removing options.\n\nThe bot doesn't know it bombed. That's my job. But every flat joke teaches me something concrete about where the prompt is too loose and where the model defaults to wordplay soup instead of actual comedic structure.\n\nWhat's one small constraint you've added to a prompt or workflow that made the output noticeably better?\n\n#LegalTech #LawyerHumor #AttorneyLife #LegalEngineering",
+    "hook_technique": "Direct accusation"
   },
   {
     "id": 8,
@@ -61,7 +63,9 @@
     "rating": 1,
     "commentary": "face-palm reaction. so dumb!",
     "posted": false,
-    "date_posted": null
+    "date_posted": null,
+    "post_text": "Every law firm runs on puns. Most just hide them in billing narratives.\n\nI built an attorney joke bot. Here's what it served up this week:\n\n\"The jury told the judge they couldn't reach a verdict because they kept losing their conviction.\"\n\n--\nChuckle score: 1/5. Face-palm reaction. so dumb!.\n--\n\nA 1 out of 5 is actually useful data. When a joke lands this flat, it tells you something specific: the bot leaned on a single-word pun with zero setup tension. \"Conviction\" does double duty, sure, but there's no misdirection. Your brain solves it before you finish reading. If you're prompting any language model for creative output, that's the pattern to watch \u2014 low surprise means your prompt gave the model too short a leash.\n\nThe fix is deceptively simple. You give the model room to build a small narrative before the turn. Setup, detour, then payoff. One extra sentence of context can be the difference between a groan and a genuine laugh. Same principle applies if you're generating contract summaries or client-facing explanations \u2014 structure the output so the reader doesn't see the ending from the first line.\n\nBad jokes make better teachers than good ones. A perfect joke tells you nothing about what to adjust next.\n\nWhat's one output from a language model that taught you more by failing than by succeeding?\n\n#LegalTech #LawyerHumor #AttorneyLife #LegalEngineering",
+    "hook_technique": "Absurd reframe"
   },
   {
     "id": 9,
@@ -69,7 +73,9 @@
     "rating": 2,
     "commentary": "oof, just made me feel bad because alcoholism is real in our profession",
     "posted": false,
-    "date_posted": null
+    "date_posted": null,
+    "post_text": "Every lawyer has a bar joke. None of them are actually funny.\nThat's exactly what makes them impossible to stop reading.\n\nI built an attorney joke bot. Here's what it served up this week:\n\n\"Somebody asked if I passed the bar exam. I said, \"Yep \u2014 though I also pass the bar on Main Street every day without stopping in, which is harder.\"\"\n\n--\nChuckle score: 2/5. Oof, just made me feel bad because alcoholism is real in our profession.\n--\n\nThat low score isn't a failure \u2014 it's a signal. When a generated joke lands in uncomfortable territory, the interesting question isn't \"how do I make the bot funnier.\" It's \"what does the output reveal about the training data, the prompt design, and the assumptions baked into both?\" A 2/5 that makes you wince teaches you more than a 4/5 that gets a polite laugh.\n\nThis is the part most people skip when experimenting with generative AI. They chase the good outputs and delete the awkward ones. But if you're building anything \u2014 a tool, a workflow, a product \u2014 the cringeworthy results are your roadmap. They show you exactly where your guardrails need work and where your prompt needs a sharper boundary.\n\nLawyer well-being is no joke, even when the bot thinks it is. That tension between humor and harm is precisely the kind of edge case that makes human review non-negotiable in any AI pipeline.\n\nWhat's a result from an AI tool that taught you more by failing than by succeeding?\n\n#LegalTech #LawyerHumor #AttorneyLife #LegalEngineering",
+    "hook_technique": "Stolen thought"
   },
   {
     "id": 10,
@@ -77,6 +83,8 @@
     "rating": 1,
     "commentary": "to be honest, this one took me too long to get so maybe I should give myself a low rating!",
     "posted": false,
-    "date_posted": null
+    "date_posted": null,
+    "post_text": "The courtroom drama of the century just dropped.\nIt involves a parking lot and zero lawyers.\n\nI built an attorney joke bot. Here's what it served up this week:\n\n\"I tried to settle my case out of court, but the parking lot was too small.\"\n\n--\nChuckle score: 1/5. To be honest, this one took me too long to get so maybe I should give myself a low rating!\n--\n\nSometimes a joke lands slow. That's actually worth paying attention to. When a pun relies on a double meaning \u2014 \"out of court\" as legal resolution vs. literally outside the building \u2014 the humor only clicks once your brain toggles between both meanings. If it takes too long to toggle, the laugh window closes. That's not just a comedy problem. It's a UX problem.\n\nThe same thing happens when you're building any language tool. If your output requires too much cognitive effort to parse, it doesn't matter how clever the underlying logic is. The user moves on. A bot that generates wordplay is essentially stress-testing how fast humans resolve ambiguity \u2014 and a 1/5 chuckle score is honest feedback that this one asked too much of the reader.\n\nThe bright side? Even a weak joke teaches you something about how language models handle double meanings and how humans process them differently. Every output is a tiny experiment.\n\nWhat's a feature or prompt in your own work that made perfect sense to you but confused everyone else?\n\n#LegalTech #LawyerHumor #AttorneyLife #LegalEngineering",
+    "hook_technique": "Absurd reframe"
   }
 ]

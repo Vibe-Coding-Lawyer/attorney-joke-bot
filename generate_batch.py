@@ -77,10 +77,13 @@ if __name__ == "__main__":
             "commentary": None,
             "posted": False,
             "date_posted": None,
+            "post_text": None,
+            "hook_technique": None,
         })
         next_id += 1
 
     save_backlog(backlog)
     print(f"\nAdded {count} jokes to jokes.json.")
-    print("Open jokes.json, read each joke, and set your rating (0.0-5.0) for each one.")
-    print("The weekly post will only use jokes that have a rating set.")
+    print("1. Open jokes.json and set your rating (0-5) and commentary for each new joke.")
+    print("2. Ask Claude Code to generate LinkedIn post text for the rated jokes.")
+    print("3. Commit jokes.json and state.json — the GitHub Action handles the rest.")
