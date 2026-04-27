@@ -52,8 +52,8 @@
     "joke": "How did the paralegal fix the broken copier? With a brief recess and some pro bono toner.",
     "rating": 0,
     "commentary": "nope, had no reaction on this one",
-    "posted": false,
-    "date_posted": null,
+    "posted": true,
+    "date_posted": "2026-04-27",
     "post_text": "You've laughed at a worse joke than this today.\nYou just won't admit it was in a contract.\n\nI built an attorney joke bot. Here's what it served up this week:\n\n\"How did the paralegal fix the broken copier? With a brief recess and some pro bono toner.\"\n\n--\nChuckle score: 0/5. Nope, had no reaction on this one.\n--\n\nA zero is actually useful data. This joke stacks three legal puns on top of each other and hopes volume equals funny. If you've ever tried prompt engineering, you recognize the pattern \u2014 the model is hedging its bets instead of committing to one strong punchline. That's a signal worth tuning on.\n\nThe trick most people miss with generative humor is constraint. When you let a model throw everything at the wall, you get \"brief recess and pro bono toner\" \u2014 two unrelated puns glued together by wishful thinking. Tightening the output format to one pun per joke is a small guardrail that changes everything. Sometimes the best prompt work is just removing options.\n\nThe bot doesn't know it bombed. That's my job. But every flat joke teaches me something concrete about where the prompt is too loose and where the model defaults to wordplay soup instead of actual comedic structure.\n\nWhat's one small constraint you've added to a prompt or workflow that made the output noticeably better?\n\n#LegalTech #LawyerHumor #AttorneyLife #LegalEngineering",
     "hook_technique": "Direct accusation"
   },
