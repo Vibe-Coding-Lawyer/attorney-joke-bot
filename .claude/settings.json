@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(gh secret *)",
+      "Bash(gh workflow *)",
+      "Bash(mkdir -p /Users/veronicalopez/Projects/_archive)",
+      "Bash(mv /Users/veronicalopez/Projects/legal-builders/linkedin-automated-content/attorney-joke-bot /Users/veronicalopez/Projects/_archive/)"
+    ]
+  }
+}

@@ -11,13 +11,27 @@ and developers want to build something themselves.
 - Both should finish the post thinking: "I could try that."
 
 ## Post Structure
-1. HOOK (2 lines, ~55 chars each — see hook rules below)
+1. HOOK (2 lines, ~55 chars each, see hook rules below)
 2. JOKE OF THE WEEK (verbatim from bot output)
-3. CHUCKLE SCORE (as rated by the bot)
-4. BODY (reader-focused insight — see body rules below)
-5. FIXES THIS WEEK (if any — technical, plain English)
+3. CHUCKLE SCORE, inline as one line ("Chuckle score: 2/5. Meh."), never a
+   bolded header or its own section
+4. BODY (reader-focused insight, see body rules below)
+5. FIXES THIS WEEK (if any, technical, plain English)
 6. CLOSING QUESTION (one question directed at the reader)
 7. HASHTAGS: #LegalTech #LawyerHumor #AttorneyLife #LegalEngineering
+
+### Attribution (hard rule)
+The bot only generates jokes. The chuckle score, the reaction line, and all
+editorial commentary are Veronica's. Never attribute any evaluation or reaction
+to the bot.
+
+### Style
+- Shorter and punchier beats layered and analytical. Body is 2-3 short paragraphs max.
+- The lesson is one punchy sentence, not a full explanation.
+- "I built" is fine inside the body, never as the opening line.
+- For low scores, prefer the "A 2/5 week is still a shipped week" framing:
+  imperfect output is the point.
+- Closing question is one line, direct, no setup.
 
 ## Hook Rules
 - Exactly 2 short sentences, ~55 characters each
